@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>fun book club</title>
+    <meta
+      name="description"
+      content="a cross-functional group of friendly folks from all backgrounds who read nerdy books together"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      html {
+        font-family: "Source Serif Pro", serif;
+        color: #191919;
+        margin: 2rem;
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+      main {
+        max-width: 33rem;
+        margin: 0 auto;
+        background: #fefefe;
+      }
+
+      .title {
+        font-family: "Source Serif Pro", serif;
+        max-width: 50rem;
+        font-size: 4rem;
+        margin: 5rem 3rem;
+        line-height: normal;
+        font-weight: bold;
+      }
+      .indent {
+        margin-left: 2rem;
+      }
+
+      h2,
+      h3 {
+        font-weight: 400;
+        padding-top: 2rem;
+        margin: 0;
+      }
+      /* https://fossheim.io/writing/posts/css-text-gradient/ */
+      a,
+      .gradient-text {
+        font-weight: bold;
+        /* Fallback: Set a background color. */
+        background-color: #ca4246;
+
+        /* Create the gradient. */
+        background-image: linear-gradient(
+          45deg,
+          #ca4246 16.666%,
+          #e16541 16.666%,
+          #e16541 33.333%,
+          #f18f43 33.333%,
+          #f18f43 50%,
+          #8b9862 50%,
+          #8b9862 66.666%,
+          #476098 66.666%,
+          #476098 83.333%,
+          #a7489b 83.333%
+        );
+
+        /* Set the background size and repeat properties. */
+        background-size: 100%;
+        background-repeat: repeat;
+
+        /* Use the text as a mask for the background. */
+        /* This will show the gradient as a text color rather than element bg. */
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        /* Animate the text when loading the element. */
+        /* This animates it on page load and when hovering out. */
+        animation: rainbow-text-simple-animation-rev 0.5s ease forwards;
+      }
+      a {
+        /* text-shadow: 1px 1px 0 #fff, -1px 1px 0 #fff, 2px 0 0 #fff, -2px 0 0 #fff; */
+        /* box-shadow: inset 0 -1px 0 0 #fff, inset 0 -3px 0 0 #bdb; */
+      }
+      .gradient-text-small {
+        font-weight: bold;
+
+        background-color: #ca4246;
+        background-image: linear-gradient(45deg, #ca4246 50%, #e16541 50%);
+        background-size: 100%;
+        background-repeat: repeat;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        /* Animate the text when loading the element. */
+        /* This animates it on page load and when hovering out. */
+        animation: rainbow-text-simple-animation-rev 0.5s ease forwards;
+      }
+      a:hover {
+        animation: rainbow-text-simple-animation 0.5s ease-in forwards;
+      }
+
+      /* Move the background and make it smaller. */
+      /* Animation shown when entering the page and after the hover animation. */
+      @keyframes rainbow-text-simple-animation-rev {
+        0% {
+          background-size: 650%;
+        }
+        40% {
+          background-size: 650%;
+        }
+        100% {
+          background-size: 100%;
+        }
+      }
+
+      /* Move the background and make it larger. */
+      /* Animation shown when hovering over the text. */
+      @keyframes rainbow-text-simple-animation {
+        0% {
+          background-size: 100%;
+        }
+        80% {
+          background-size: 650%;
+        }
+        100% {
+          background-size: 650%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="title">
+      <span class="gradient-text">fun book club</span> is a cross-<span
+        class="gradient-text-small"
+        >fun</span
+      >ctional group of friendly folks from all backgrounds who read nerdy
+      books&nbsp;together.
+    </div>
+
+    <main>
+      <p>
+        Making time for reading can be hard, but exposing yourself to new ideas
+        and learning from fields that may sit adjacent to your area of expertise
+        is always worth doing.
+      </p>
+      <p>
+        <span class="gradient-text">fun book club</span> is a little group of
+        people who are in (or interested in) the tech industry who keep each
+        other motivated to read and discuss one book a month. We are not limited
+        to any one field of expertise — the idea is to have designers,
+        engineers, product people, test analysts, anybody — all
+      </p>
+      <section>
+        <h2>how it works</h2>
+        <ul>
+          <li>
+            every month we read a book from our
+            <a href="https://trello.com/b/peOy1FZd/fun-book-club"
+              >list on Trello</a
+            >
+            (anyone can add suggestions and vote)
+          </li>
+          <li>
+            we have a
+            <a href="">chat room on Discord</a> if you’d like to stay in touch
+            throughout the month
+          </li>
+          <li>
+            then we get together (online) and have a relaxed guided discussion
+            about the book
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>our guiding principles</h2>
+        <div class="indent">
+          <h3>this is a safe place</h3>
+          <p class="indent">
+            <span class="gradient-text">fun book club</span> is dedicated to
+            being a safe, inclusive, welcoming, and harrassment-free space. We
+            have absolutely zero tolerance for discrimination or bullying of any
+            kind. We are working on a Code of Conduct that will be linked here
+            before we go live. It will be strictly enforced.
+          </p>
+          <h3>leave your ego at the door</h3>
+          <p class="indent">
+            This is not a place for grand-standing or one-upping others. Stay
+            humble and remember that you can always learn from others. Try to
+            listen as much as you talk!
+          </p>
+          <h3>embrace the “beginner's mind”</h3>
+          <p class="indent">
+            Have an attitude of openness, eagerness, and lack of preconceptions
+            when reading books and approaching discussions, even if it's a topic
+            you're familiar with (or even an expert in).
+          </p>
+          <h3>have fun!</h3>
+          <p class="indent">
+            Don't take the <span class="gradient-text">fun book club</span> too
+            seriously. It's supposed to be a light and, well,
+            <span class="gradient-text-small">fun</span> little group — don't
+            stress if you fall behind on your reading or if you feel like other
+            folks seem to know more about a particular topic than you do. We're
+            just here to read books and have a chin wag!
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
